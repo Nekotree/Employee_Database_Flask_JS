@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 import mysql.connector
 
 update_app = Blueprint("update_app", __name__)
@@ -13,6 +13,11 @@ def connect_db():
     return mysql.connector.connect(
         host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME
     )
+
+
+@update_app.route("/update")
+def update():
+    return render_template("update.html")
 
 
 @update_app.route("/update-employee", methods=["POST"])

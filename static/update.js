@@ -5,49 +5,39 @@ export const updateEmployee = (
   department,
   salary
 ) => {
-  console.log("updateEmployee loaded!");
+  sessionStorage.setItem("employeeEmail", email);
+  sessionStorage.setItem("employeeFirstName", firstName);
+  sessionStorage.setItem("employeeLastName", lastName);
+  sessionStorage.setItem("employeeDepartment", department);
+  sessionStorage.setItem("employeeSalary", salary);
 
-  document.getElementById("update-first-name").value = firstName;
-  document
-    .getElementById("update-first-name")
-    .setAttribute("original", firstName);
-  document.getElementById("update-last-name").value = lastName;
-  document
-    .getElementById("update-last-name")
-    .setAttribute("original", lastName);
-  document.getElementById("update-email").value = email;
-  document.getElementById("update-email").setAttribute("original", email);
-  document.getElementById("update-department").value = department;
-  document
-    .getElementById("update-department")
-    .setAttribute("original", department);
-  document.getElementById("update-salary").value = salary;
-  document.getElementById("update-salary").setAttribute("original", salary);
-
-  document.getElementById("update-employee-form").style.display = "block";
+  window.location.href = "/update";
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  //Load employee details from sessionStorage
+  //Keep original details
+  const originalEmployee = {
+    email: sessionStorage.getItem("employeeEmail"),
+    first_name: sessionStorage.getItem("employeeFirstName"),
+    last_name: sessionStorage.getItem("employeeLastName"),
+    department: sessionStorage.getItem("employeeDepartment"),
+    salary: sessionStorage.getItem("employeeSalary"),
+  };
+
+  document.getElementById("update-email").value = originalEmployee.email;
+  document.getElementById("update-first-name").value =
+    originalEmployee.first_name;
+  document.getElementById("update-last-name").value =
+    originalEmployee.last_name;
+  document.getElementById("update-department").value =
+    originalEmployee.department;
+  document.getElementById("update-salary").value = originalEmployee.salary;
+
   const updateForm = document.getElementById("update-employee-form");
   if (updateForm) {
     updateForm.addEventListener("submit", (event) => {
       event.preventDefault();
-
-      const orginalEmployee = {
-        first_name: document
-          .getElementById("update-first-name")
-          .getAttribute("original"),
-        last_name: document
-          .getElementById("update-last-name")
-          .getAttribute("original"),
-        email: document.getElementById("update-email").getAttribute("original"),
-        department: document
-          .getElementById("update-department")
-          .getAttribute("original"),
-        salary: document
-          .getElementById("update-salary")
-          .getAttribute("original"),
-      };
 
       const updatedEmployee = {
         first_name: document.getElementById("update-first-name").value,
@@ -57,14 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
         salary: document.getElementById("update-salary").value,
       };
 
+      //Check if at least one field is modified
       const isModified = Object.keys(updatedEmployee).some(
-        (key) => updatedEmployee[key] !== orginalEmployee[key]
+        (key) => updatedEmployee[key] !== originalEmployee[key]
       );
 
-      console.log(isModified);
-
       if (!isModified) {
-        alert("At least one field must be modified to update the employee.");
+        alert("At least one field must be updated.");
         return;
       }
 
@@ -82,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log("Update response:", data);
         })
         .catch((error) => {
-          console.error("Error updating employee:", error);
+          console.error("Error with update:", error);
         });
     });
   } else {

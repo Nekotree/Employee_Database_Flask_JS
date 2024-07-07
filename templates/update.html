@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Update Employee</h1>
+    <div id="update-form-container">
+        <form id="update-employee-form">
+            <label for="update-first-name">First Name:</label>
+            <input type="text" id="update-first-name" name="first_name"><br>
+            <label for="update-last-name">Last Name:</label>
+            <input type="text" id="update-last-name" name="last_name"><br>
+            <label for="update-email">Email:</label>
+            <input type="text" id="update-email" name="email" readonly><br>
+            <label for="update-department">Department:</label>
+            <input type="text" id="update-department" name="department"><br>
+            <label for="update-salary">Salary:</label>
+            <input type="text" id="update-salary" name="salary"><br>
+            <button type="submit">Update</button>
+        </form>
+        <button id="search-page" onclick="location.href='/search'">Search Page</button>
+    </div>
+    <script type="module" src="../static/update.js"></script>
+</body>
+</html>
