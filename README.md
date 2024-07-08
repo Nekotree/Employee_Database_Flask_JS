@@ -19,9 +19,9 @@ Full Stack employee management system.
 <div>
   <h2>Front-End:</h2>
   <ul>
-  Vanilla JavaScript: Enhances interactivity and user experience.
-  HTML5: Provides the structure and layout of the web pages.
-  CSS: Styles the application for a user-friendly interface.
+  <li>Vanilla JavaScript: Enhances interactivity and user experience.</li>
+  <li>HTML5: Provides the structure and layout of the web pages.</li>
+  <li>CSS: Styles the application for a user-friendly interface.</li>
   </ul>
   Back-End:
   Python Flask: Handles server-side logic and routes.
