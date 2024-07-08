@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Update response:", data);
+          if (data.success) {
+            alert("Employee updated successfully!");
+            console.log("Update response:", data.message);
+          } else {
+            alert("Please enter a valid numeric salary.");
+            console.log("Update response:", data.message);
+          }
         })
         .catch((error) => {
           console.error("Error with update:", error);
@@ -80,3 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.updateEmployee = updateEmployee;
+
+// Orginal front end logic for checking for salary numeric input, however, was better dealt with on the server side
+// const salaryInput = document.getElementById("update-salary").value;
+// const isValidSalary = !isNaN(
+//   parseFloat(salaryInput) && isFinite(salaryInput)
+// );
+
+// if (!isValidSalary) {
+//   alert("Please enter a valid numeric salary.");
+//   return;
+// }

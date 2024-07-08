@@ -15,6 +15,14 @@ def connect_db():
     )
 
 
+def is_valid_salary(salary):
+    try:
+        float(salary)
+        return True
+    except ValueError:
+        return False
+
+
 @update_app.route("/update")
 def update():
     return render_template("update.html")
@@ -28,6 +36,9 @@ def update_employee():
     last_name = data["last_name"]
     department = data["department"]
     salary = data["salary"]
+
+    if not is_valid_salary(salary):
+        return jsonify({"success": False, "message": "Invalid salary input"})
 
     conn = connect_db()
     cursor = conn.cursor(dictionary=True)

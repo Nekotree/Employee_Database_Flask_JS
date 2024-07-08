@@ -15,3 +15,50 @@
     margin-top: 10px;
     margin-left: 20px;
 }
+
+/* update.html */
+
+#update-form-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#update-employee-form {
+    display: grid;
+    gap: 10px;
+
+}
+
+#update-employee-form label {
+    font-weight: bold;
+}
+
+#update-employee-form input[type="text"],
+#update-employee-form input[type="number"]{
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+#update-employee-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#update-employee-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
