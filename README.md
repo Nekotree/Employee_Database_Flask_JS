@@ -23,8 +23,10 @@ Full Stack employee management system.
   <li>HTML5: Provides the structure and layout of the web pages.</li>
   <li>CSS: Styles the application for a user-friendly interface.</li>
   </ul>
-  Back-End:
-  Python Flask: Handles server-side logic and routes.
-  Database:
-  MySQL: Stores and manages employee data.
+  <h2>Back-End:</h2>
+  <ul>
+  <li>Python Flask: Handles server-side logic and routes.</li>
+  <li>Database:</li>
+  <li>MySQL: Stores and manages employee data.</li>
+  </ul>
 </div>
