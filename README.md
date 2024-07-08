@@ -2,7 +2,6 @@
 Full Stack employee management system. 
 <br>
 <h2>Overview</h2>
-<br>
 <p>This full-stack application allows you to manage employee data efficiently.</p> 
 <p>Built using vanilla JavaScript, HTML5, Python Flask, and MySQL, it provides functionalities to create, search, update, and delete employee records.</p>
 
