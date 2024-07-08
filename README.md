@@ -1,7 +1,5 @@
 # Employee_Database_Flask_JS
 Full Stack employee management system. 
-
-Employee Management System
 <br>
 <h2>Overview</h2>
 <br>
