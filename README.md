@@ -5,7 +5,7 @@ Employee Management System
 Overview
 This full-stack application allows you to manage employee data efficiently. Built using vanilla JavaScript, HTML5, Python Flask, and MySQL, it provides functionalities to create, search, update, and delete employee records.
 
-Features:
+<h1>Features:</h1>
   Create Employee: Add new employee details to the database.
   Search Employee: Search for employees by their names.
   Update Employee: Modify existing employee details.
