@@ -15,12 +15,16 @@ Full Stack employee management system.
   </ol>
 </div>
   
-Technologies Used:
-  Front-End:
+<h1>Technologies Used:</h1>
+<div>
+  <h2>Front-End:</h2>
+  <ul>
   Vanilla JavaScript: Enhances interactivity and user experience.
   HTML5: Provides the structure and layout of the web pages.
   CSS: Styles the application for a user-friendly interface.
+  </ul>
   Back-End:
   Python Flask: Handles server-side logic and routes.
   Database:
   MySQL: Stores and manages employee data.
+</div>
