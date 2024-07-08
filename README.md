@@ -8,10 +8,10 @@ This full-stack application allows you to manage employee data efficiently. Buil
 <h1>Features:</h1>
 <div>
   <ol>
-  Create Employee: Add new employee details to the database.
-  Search Employee: Search for employees by their names.
-  Update Employee: Modify existing employee details.
-  Delete Employee: Remove employee records from the database.
+  <li>Create Employee: Add new employee details to the database.</li>
+  <li>Search Employee: Search for employees by their names.</li>
+  <li>Update Employee: Modify existing employee details.</li>
+  <li>Delete Employee: Remove employee records from the database.</li>
   </ol>
 </div>
   
